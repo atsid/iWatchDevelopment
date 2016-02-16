@@ -544,6 +544,7 @@
 				4DA28F2B1C728D6F0001EC78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DA28F2D1C728D6F0001EC78 /* Build configuration list for PBXNativeTarget "FlightWatch WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +553,7 @@
 				4DA28F2F1C728D6F0001EC78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DA28F311C728D6F0001EC78 /* Build configuration list for PBXNativeTarget "FlightWatch" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +562,7 @@
 				4DA28F331C728D6F0001EC78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
