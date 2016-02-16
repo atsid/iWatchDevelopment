@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4DA28EFA1C728D6F0001EC78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA28EF91C728D6F0001EC78 /* AppDelegate.swift */; };
+		4DA28EFC1C728D6F0001EC78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA28EFB1C728D6F0001EC78 /* ViewController.swift */; };
+		4DA28EFF1C728D6F0001EC78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA28EFD1C728D6F0001EC78 /* Main.storyboard */; };
+		4DA28F011C728D6F0001EC78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA28F001C728D6F0001EC78 /* Assets.xcassets */; };
+		4DA28F041C728D6F0001EC78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA28F021C728D6F0001EC78 /* LaunchScreen.storyboard */; };
+		4DA28F091C728D6F0001EC78 /* FlightWatch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4DA28F081C728D6F0001EC78 /* FlightWatch WatchKit App.app */; };
+		4DA28F0F1C728D6F0001EC78 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA28F0D1C728D6F0001EC78 /* Interface.storyboard */; };
+		4DA28F111C728D6F0001EC78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA28F101C728D6F0001EC78 /* Assets.xcassets */; };
+		4DA28F181C728D6F0001EC78 /* FlightWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4DA28F171C728D6F0001EC78 /* FlightWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4DA28F1F1C728D6F0001EC78 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA28F1E1C728D6F0001EC78 /* InterfaceController.swift */; };
+		4DA28F211C728D6F0001EC78 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA28F201C728D6F0001EC78 /* ExtensionDelegate.swift */; };
+		4DA28F231C728D6F0001EC78 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA28F221C728D6F0001EC78 /* NotificationController.swift */; };
+		4DA28F251C728D6F0001EC78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA28F241C728D6F0001EC78 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4DA28F0A1C728D6F0001EC78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DA28EEE1C728D6F0001EC78 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DA28F071C728D6F0001EC78;
+			remoteInfo = "FlightWatch WatchKit App";
+		};
+		4DA28F191C728D6F0001EC78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DA28EEE1C728D6F0001EC78 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DA28F161C728D6F0001EC78;
+			remoteInfo = "FlightWatch WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4DA28F2C1C728D6F0001EC78 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4DA28F181C728D6F0001EC78 /* FlightWatch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DA28F301C728D6F0001EC78 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				4DA28F091C728D6F0001EC78 /* FlightWatch WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4DA28EF61C728D6F0001EC78 /* FlightWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DA28EF91C728D6F0001EC78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4DA28EFB1C728D6F0001EC78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4DA28EFE1C728D6F0001EC78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4DA28F001C728D6F0001EC78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4DA28F031C728D6F0001EC78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4DA28F051C728D6F0001EC78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DA28F081C728D6F0001EC78 /* FlightWatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FlightWatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DA28F0E1C728D6F0001EC78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		4DA28F101C728D6F0001EC78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4DA28F121C728D6F0001EC78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DA28F171C728D6F0001EC78 /* FlightWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FlightWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DA28F1D1C728D6F0001EC78 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		4DA28F1E1C728D6F0001EC78 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		4DA28F201C728D6F0001EC78 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		4DA28F221C728D6F0001EC78 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		4DA28F241C728D6F0001EC78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4DA28F261C728D6F0001EC78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DA28EF31C728D6F0001EC78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DA28F141C728D6F0001EC78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4DA28EED1C728D6F0001EC78 = {
+			isa = PBXGroup;
+			children = (
+				4DA28EF81C728D6F0001EC78 /* FlightWatch */,
+				4DA28F0C1C728D6F0001EC78 /* FlightWatch WatchKit App */,
+				4DA28F1B1C728D6F0001EC78 /* FlightWatch WatchKit Extension */,
+				4DA28EF71C728D6F0001EC78 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4DA28EF71C728D6F0001EC78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DA28EF61C728D6F0001EC78 /* FlightWatch.app */,
+				4DA28F081C728D6F0001EC78 /* FlightWatch WatchKit App.app */,
+				4DA28F171C728D6F0001EC78 /* FlightWatch WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DA28EF81C728D6F0001EC78 /* FlightWatch */ = {
+			isa = PBXGroup;
+			children = (
+				4DA28EF91C728D6F0001EC78 /* AppDelegate.swift */,
+				4DA28EFB1C728D6F0001EC78 /* ViewController.swift */,
+				4DA28EFD1C728D6F0001EC78 /* Main.storyboard */,
+				4DA28F001C728D6F0001EC78 /* Assets.xcassets */,
+				4DA28F021C728D6F0001EC78 /* LaunchScreen.storyboard */,
+				4DA28F051C728D6F0001EC78 /* Info.plist */,
+			);
+			path = FlightWatch;
+			sourceTree = "<group>";
+		};
+		4DA28F0C1C728D6F0001EC78 /* FlightWatch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				4DA28F0D1C728D6F0001EC78 /* Interface.storyboard */,
+				4DA28F101C728D6F0001EC78 /* Assets.xcassets */,
+				4DA28F121C728D6F0001EC78 /* Info.plist */,
+			);
+			path = "FlightWatch WatchKit App";
+			sourceTree = "<group>";
+		};
+		4DA28F1B1C728D6F0001EC78 /* FlightWatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4DA28F1E1C728D6F0001EC78 /* InterfaceController.swift */,
+				4DA28F201C728D6F0001EC78 /* ExtensionDelegate.swift */,
+				4DA28F221C728D6F0001EC78 /* NotificationController.swift */,
+				4DA28F241C728D6F0001EC78 /* Assets.xcassets */,
+				4DA28F261C728D6F0001EC78 /* Info.plist */,
+				4DA28F1C1C728D6F0001EC78 /* Supporting Files */,
+			);
+			path = "FlightWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		4DA28F1C1C728D6F0001EC78 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DA28F1D1C728D6F0001EC78 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4DA28EF51C728D6F0001EC78 /* FlightWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DA28F311C728D6F0001EC78 /* Build configuration list for PBXNativeTarget "FlightWatch" */;
+			buildPhases = (
+				4DA28EF21C728D6F0001EC78 /* Sources */,
+				4DA28EF31C728D6F0001EC78 /* Frameworks */,
+				4DA28EF41C728D6F0001EC78 /* Resources */,
+				4DA28F301C728D6F0001EC78 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DA28F0B1C728D6F0001EC78 /* PBXTargetDependency */,
+			);
+			name = FlightWatch;
+			productName = FlightWatch;
+			productReference = 4DA28EF61C728D6F0001EC78 /* FlightWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4DA28F071C728D6F0001EC78 /* FlightWatch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DA28F2D1C728D6F0001EC78 /* Build configuration list for PBXNativeTarget "FlightWatch WatchKit App" */;
+			buildPhases = (
+				4DA28F061C728D6F0001EC78 /* Resources */,
+				4DA28F2C1C728D6F0001EC78 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DA28F1A1C728D6F0001EC78 /* PBXTargetDependency */,
+			);
+			name = "FlightWatch WatchKit App";
+			productName = "FlightWatch WatchKit App";
+			productReference = 4DA28F081C728D6F0001EC78 /* FlightWatch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		4DA28F161C728D6F0001EC78 /* FlightWatch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DA28F291C728D6F0001EC78 /* Build configuration list for PBXNativeTarget "FlightWatch WatchKit Extension" */;
+			buildPhases = (
+				4DA28F131C728D6F0001EC78 /* Sources */,
+				4DA28F141C728D6F0001EC78 /* Frameworks */,
+				4DA28F151C728D6F0001EC78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FlightWatch WatchKit Extension";
+			productName = "FlightWatch WatchKit Extension";
+			productReference = 4DA28F171C728D6F0001EC78 /* FlightWatch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4DA28EEE1C728D6F0001EC78 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "ATS Inc";
+				TargetAttributes = {
+					4DA28EF51C728D6F0001EC78 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 7J88VDU7KS;
+					};
+					4DA28F071C728D6F0001EC78 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 7J88VDU7KS;
+					};
+					4DA28F161C728D6F0001EC78 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 7J88VDU7KS;
+					};
+				};
+			};
+			buildConfigurationList = 4DA28EF11C728D6F0001EC78 /* Build configuration list for PBXProject "FlightWatch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4DA28EED1C728D6F0001EC78;
+			productRefGroup = 4DA28EF71C728D6F0001EC78 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4DA28EF51C728D6F0001EC78 /* FlightWatch */,
+				4DA28F071C728D6F0001EC78 /* FlightWatch WatchKit App */,
+				4DA28F161C728D6F0001EC78 /* FlightWatch WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4DA28EF41C728D6F0001EC78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA28F041C728D6F0001EC78 /* LaunchScreen.storyboard in Resources */,
+				4DA28F011C728D6F0001EC78 /* Assets.xcassets in Resources */,
+				4DA28EFF1C728D6F0001EC78 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DA28F061C728D6F0001EC78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA28F111C728D6F0001EC78 /* Assets.xcassets in Resources */,
+				4DA28F0F1C728D6F0001EC78 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DA28F151C728D6F0001EC78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA28F251C728D6F0001EC78 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DA28EF21C728D6F0001EC78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA28EFC1C728D6F0001EC78 /* ViewController.swift in Sources */,
+				4DA28EFA1C728D6F0001EC78 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DA28F131C728D6F0001EC78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA28F231C728D6F0001EC78 /* NotificationController.swift in Sources */,
+				4DA28F211C728D6F0001EC78 /* ExtensionDelegate.swift in Sources */,
+				4DA28F1F1C728D6F0001EC78 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4DA28F0B1C728D6F0001EC78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DA28F071C728D6F0001EC78 /* FlightWatch WatchKit App */;
+			targetProxy = 4DA28F0A1C728D6F0001EC78 /* PBXContainerItemProxy */;
+		};
+		4DA28F1A1C728D6F0001EC78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DA28F161C728D6F0001EC78 /* FlightWatch WatchKit Extension */;
+			targetProxy = 4DA28F191C728D6F0001EC78 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4DA28EFD1C728D6F0001EC78 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DA28EFE1C728D6F0001EC78 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4DA28F021C728D6F0001EC78 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DA28F031C728D6F0001EC78 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4DA28F0D1C728D6F0001EC78 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DA28F0E1C728D6F0001EC78 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4DA28F271C728D6F0001EC78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4DA28F281C728D6F0001EC78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4DA28F2A1C728D6F0001EC78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "FlightWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atsid.FlightWatch.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		4DA28F2B1C728D6F0001EC78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "FlightWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atsid.FlightWatch.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		4DA28F2E1C728D6F0001EC78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = FlightWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "FlightWatch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atsid.FlightWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		4DA28F2F1C728D6F0001EC78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = FlightWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "FlightWatch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atsid.FlightWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		4DA28F321C728D6F0001EC78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FlightWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atsid.FlightWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4DA28F331C728D6F0001EC78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FlightWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atsid.FlightWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4DA28EF11C728D6F0001EC78 /* Build configuration list for PBXProject "FlightWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DA28F271C728D6F0001EC78 /* Debug */,
+				4DA28F281C728D6F0001EC78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DA28F291C728D6F0001EC78 /* Build configuration list for PBXNativeTarget "FlightWatch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DA28F2A1C728D6F0001EC78 /* Debug */,
+				4DA28F2B1C728D6F0001EC78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4DA28F2D1C728D6F0001EC78 /* Build configuration list for PBXNativeTarget "FlightWatch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DA28F2E1C728D6F0001EC78 /* Debug */,
+				4DA28F2F1C728D6F0001EC78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4DA28F311C728D6F0001EC78 /* Build configuration list for PBXNativeTarget "FlightWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DA28F321C728D6F0001EC78 /* Debug */,
+				4DA28F331C728D6F0001EC78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4DA28EEE1C728D6F0001EC78 /* Project object */;
+}
