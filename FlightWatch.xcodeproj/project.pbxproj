@@ -155,8 +155,8 @@
 		4DA28F1B1C728D6F0001EC78 /* FlightWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				4DEF26B81C73F960001F8AAD /* Flight.swift */,
 				4DEF26B41C73F298001F8AAD /* FlightInterfaceController.swift */,
+				4DEF26B81C73F960001F8AAD /* Flight.swift */,
 				4DA28F201C728D6F0001EC78 /* ExtensionDelegate.swift */,
 				4DA28F221C728D6F0001EC78 /* NotificationController.swift */,
 				4DA28F241C728D6F0001EC78 /* Assets.xcassets */,
