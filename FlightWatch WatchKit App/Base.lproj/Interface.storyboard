@@ -44,13 +44,13 @@
                         </group>
                     </items>
                     <connections>
-                        <outlet property="boardTimeLabel" destination="rvv-iG-Chp" id="GPB-J0-MPJ"/>
-                        <outlet property="boardingLabel" destination="RQq-ww-VxB" id="guc-Yk-hLV"/>
-                        <outlet property="flightLabel" destination="aod-a3-alH" id="cu1-rI-Uyx"/>
-                        <outlet property="gateLabel" destination="5rg-sq-bhc" id="wUq-Ol-imB"/>
-                        <outlet property="routeLabel" destination="6TM-1Q-QfA" id="YA9-nY-t0s"/>
-                        <outlet property="seatLabel" destination="4pT-Xn-SrC" id="e1j-jc-orK"/>
-                        <outlet property="statusLabel" destination="q4M-aI-wy2" id="qzo-aV-d8F"/>
+                        <outlet property="boardTimeLabel" destination="rvv-iG-Chp" id="CW5-aV-G2l"/>
+                        <outlet property="boardingLabel" destination="RQq-ww-VxB" id="jCB-xg-BdE"/>
+                        <outlet property="flightLabel" destination="aod-a3-alH" id="SCs-BX-GDl"/>
+                        <outlet property="gateLabel" destination="5rg-sq-bhc" id="d8A-o7-5BL"/>
+                        <outlet property="routeLabel" destination="6TM-1Q-QfA" id="LCJ-7D-7BR"/>
+                        <outlet property="seatLabel" destination="4pT-Xn-SrC" id="DSq-t2-9Cx"/>
+                        <outlet property="statusLabel" destination="q4M-aI-wy2" id="bfi-Ev-8nr"/>
                     </connections>
                 </controller>
             </objects>
