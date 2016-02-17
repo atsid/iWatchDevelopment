@@ -16,10 +16,12 @@
 		4DA28F0F1C728D6F0001EC78 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA28F0D1C728D6F0001EC78 /* Interface.storyboard */; };
 		4DA28F111C728D6F0001EC78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA28F101C728D6F0001EC78 /* Assets.xcassets */; };
 		4DA28F181C728D6F0001EC78 /* FlightWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4DA28F171C728D6F0001EC78 /* FlightWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		4DA28F1F1C728D6F0001EC78 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA28F1E1C728D6F0001EC78 /* InterfaceController.swift */; };
 		4DA28F211C728D6F0001EC78 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA28F201C728D6F0001EC78 /* ExtensionDelegate.swift */; };
 		4DA28F231C728D6F0001EC78 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA28F221C728D6F0001EC78 /* NotificationController.swift */; };
 		4DA28F251C728D6F0001EC78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA28F241C728D6F0001EC78 /* Assets.xcassets */; };
+		4DEF26B11C73DE68001F8AAD /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF26B01C73DE68001F8AAD /* WatchConnectivity.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		4DEF26B51C73F298001F8AAD /* FlightInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF26B41C73F298001F8AAD /* FlightInterfaceController.swift */; };
+		4DEF26B91C73F960001F8AAD /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF26B81C73F960001F8AAD /* Flight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,11 +80,13 @@
 		4DA28F121C728D6F0001EC78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DA28F171C728D6F0001EC78 /* FlightWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FlightWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA28F1D1C728D6F0001EC78 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		4DA28F1E1C728D6F0001EC78 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		4DA28F201C728D6F0001EC78 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		4DA28F221C728D6F0001EC78 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		4DA28F241C728D6F0001EC78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DA28F261C728D6F0001EC78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DEF26B01C73DE68001F8AAD /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		4DEF26B41C73F298001F8AAD /* FlightInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightInterfaceController.swift; sourceTree = "<group>"; };
+		4DEF26B81C73F960001F8AAD /* Flight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DEF26B11C73DE68001F8AAD /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +111,7 @@
 		4DA28EED1C728D6F0001EC78 = {
 			isa = PBXGroup;
 			children = (
+				4DEF26B01C73DE68001F8AAD /* WatchConnectivity.framework */,
 				4DA28EF81C728D6F0001EC78 /* FlightWatch */,
 				4DA28F0C1C728D6F0001EC78 /* FlightWatch WatchKit App */,
 				4DA28F1B1C728D6F0001EC78 /* FlightWatch WatchKit Extension */,
@@ -149,7 +155,8 @@
 		4DA28F1B1C728D6F0001EC78 /* FlightWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				4DA28F1E1C728D6F0001EC78 /* InterfaceController.swift */,
+				4DEF26B81C73F960001F8AAD /* Flight.swift */,
+				4DEF26B41C73F298001F8AAD /* FlightInterfaceController.swift */,
 				4DA28F201C728D6F0001EC78 /* ExtensionDelegate.swift */,
 				4DA28F221C728D6F0001EC78 /* NotificationController.swift */,
 				4DA28F241C728D6F0001EC78 /* Assets.xcassets */,
@@ -312,8 +319,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DA28F231C728D6F0001EC78 /* NotificationController.swift in Sources */,
+				4DEF26B91C73F960001F8AAD /* Flight.swift in Sources */,
+				4DEF26B51C73F298001F8AAD /* FlightInterfaceController.swift in Sources */,
 				4DA28F211C728D6F0001EC78 /* ExtensionDelegate.swift in Sources */,
-				4DA28F1F1C728D6F0001EC78 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
