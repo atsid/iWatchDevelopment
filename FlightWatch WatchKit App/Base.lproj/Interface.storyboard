@@ -13,8 +13,34 @@
                         <group width="1" alignment="left" id="paR-A5-YhE">
                             <items>
                                 <imageView width="40" height="40" alignment="left" image="ATS A" id="dVU-ns-CCY"/>
+                                <group alignment="left" layout="vertical" spacing="0.0" id="CIc-ny-dQC">
+                                    <items>
+                                        <label alignment="left" text="Flight 123" id="aod-a3-alH">
+                                            <color key="textColor" red="0.98039215686274506" green="0.066666666666666666" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label alignment="left" text="MAN to SFO" id="6TM-1Q-QfA"/>
+                                    </items>
+                                </group>
                             </items>
                             <edgeInsets key="margins" left="0.0" right="0.0" top="6" bottom="0.0"/>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="30X-bp-3Lx">
+                            <items>
+                                <label alignment="left" text="AA123 Boards" id="RQq-ww-VxB"/>
+                                <label height="44" alignment="left" text="15:06" id="rvv-iG-Chp">
+                                    <color key="textColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="54"/>
+                                </label>
+                                <label alignment="left" text="On time" id="q4M-aI-wy2">
+                                    <color key="textColor" red="0.14901960784313725" green="0.87058823529411766" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="ahe-GX-Gc7">
+                            <items>
+                                <label alignment="left" text="Gate 1A" id="5rg-sq-bhc"/>
+                                <label alignment="right" text="Seat 64A" id="4pT-Xn-SrC"/>
+                            </items>
                         </group>
                     </items>
                 </controller>
