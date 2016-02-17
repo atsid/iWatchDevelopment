@@ -34,12 +34,12 @@
                                 <label alignment="left" text="On time" id="q4M-aI-wy2">
                                     <color key="textColor" red="0.14901960784313725" green="0.87058823529411766" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
                                 </label>
-                            </items>
-                        </group>
-                        <group width="1" alignment="left" id="ahe-GX-Gc7">
-                            <items>
-                                <label alignment="left" text="Gate 1A" id="5rg-sq-bhc"/>
-                                <label alignment="right" text="Seat 64A" id="4pT-Xn-SrC"/>
+                                <group width="1" alignment="left" id="ahe-GX-Gc7">
+                                    <items>
+                                        <label alignment="left" text="Gate 1A" id="5rg-sq-bhc"/>
+                                        <label alignment="right" text="Seat 64A" id="4pT-Xn-SrC"/>
+                                    </items>
+                                </group>
                             </items>
                         </group>
                     </items>
