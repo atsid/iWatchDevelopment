@@ -23,7 +23,6 @@ class FlightInterfaceController: WKInterfaceController, WCSessionDelegate {
 
     var watchSession : WCSession?
     
-    
     func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]){
         let formatter = NSDateFormatter()
         formatter.dateFormat = "HH:mm"
