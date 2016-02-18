@@ -8,10 +8,8 @@
 
 import WatchKit
 import Foundation
-import WatchConnectivity
 
-
-class FlightInterfaceController: WKInterfaceController, WCSessionDelegate {
+class FlightInterfaceController: WKInterfaceController {
 
     @IBOutlet var flightLabel: WKInterfaceLabel!
     @IBOutlet var routeLabel: WKInterfaceLabel!
@@ -21,8 +19,6 @@ class FlightInterfaceController: WKInterfaceController, WCSessionDelegate {
     @IBOutlet var gateLabel: WKInterfaceLabel!
     @IBOutlet var seatLabel: WKInterfaceLabel!
 
-    var watchSession : WCSession?
-    
     // 1
     var flight: Flight? {
         // 2
@@ -51,25 +47,26 @@ class FlightInterfaceController: WKInterfaceController, WCSessionDelegate {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "HH:mm"
+        
+        let dict = [
+            "origin": "ABA",
+            "destination": "SFO",
+            "number": "AA100",
+            "delayed": "no",
+            "gate": "1A"
+        ];
+        flight = Flight(dictionary: dict, formatter: formatter)
     }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        
-        if(WCSession.isSupported()){
-            watchSession = WCSession.defaultSession()
-            // Add self as a delegate of the session so we can handle messages
-            watchSession!.delegate = self
-            watchSession!.activateSession()
-        }
-
-        
     }
 
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
 }

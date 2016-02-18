@@ -40,24 +40,6 @@ class Flight {
     }
   }
   
-  class func allFlights() -> [Flight] {
-    var flights = [Flight]()
-    let formatter = NSDateFormatter()
-    formatter.dateFormat = "HH:mm"
-    if let path = NSBundle.mainBundle().pathForResource("Flights", ofType: "json"), let data = NSData(contentsOfFile: path) {
-      do {
-        let json = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments) as! [Dictionary<String, String>]
-        for dict in json {
-          let flight = Flight(dictionary: dict, formatter: formatter)
-          flights.append(flight)
-        }
-      } catch {
-        print(error)
-      }
-    }
-    return flights
-  }
-  
   init(origin: String, destination: String, number: String, boardsAt: String, delayed: String, gate: String, seat: String) {
     self.origin = origin
     self.destination = destination
@@ -72,13 +54,21 @@ class Flight {
     let origin = dictionary["origin"]!
     let destination = dictionary["destination"]!
     let number = dictionary["number"]!
-    let boardsAt = formatter.stringFromDate(NSDate().dateByAddingTimeInterval(Double(arc4random_uniform(21600) + 1800)))
+    
+    let date =
+        NSDate().dateByAddingTimeInterval(Double(arc4random_uniform(21600) + 1800))
+    
+    let boardsAt = formatter.stringFromDate(date)
     let delayed = dictionary["delayed"]!
     let gate = dictionary["gate"]!
     let row = ["A", "B", "C", "D", "E", "F", "G"]
     let seat = "\(arc4random_uniform(40) + 1)\(row[Int(arc4random_uniform(UInt32(row.count)))])"
-    self.init(origin: origin, destination: destination, number: number, boardsAt: boardsAt, delayed: delayed, gate: gate, seat: seat)
+    self.init(origin: origin,
+        destination: destination,
+        number: number,
+        boardsAt: boardsAt,
+        delayed: delayed,
+        gate: gate,
+        seat: seat)
   }
-
-  
 }
