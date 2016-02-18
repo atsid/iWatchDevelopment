@@ -23,34 +23,50 @@ class FlightInterfaceController: WKInterfaceController, WCSessionDelegate {
 
     var watchSession : WCSession?
     
-    // 1
-    var flight: Flight? {
-        // 2
-        didSet {
-            // 3
-            if let flight = flight {
-                // 4
-                flightLabel.setText("Flight \(flight.shortNumber)")
-                routeLabel.setText(flight.route)
-                boardingLabel.setText("\(flight.number) Boards")
-                boardTimeLabel.setText(flight.boardsAt)
-                // 5
-                if flight.onSchedule {
-                    statusLabel.setText("On Time")
-                } else {
-                    statusLabel.setText("Delayed")
-                    statusLabel.setTextColor(UIColor.redColor())
-                }
-                gateLabel.setText("Gate \(flight.gate)")
-                seatLabel.setText("Seat \(flight.seat)")
-            }
+    
+    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]){
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "HH:mm"
+        
+        let flight = Flight(dictionary: applicationContext as! [String : String], formatter: formatter)
+        
+        flightLabel.setText("Flight \(flight.shortNumber)")
+        routeLabel.setText(flight.route)
+        boardingLabel.setText("\(flight.number) Boards")
+        boardTimeLabel.setText(flight.boardsAt)
+        if flight.onSchedule {
+            statusLabel.setText("On Time")
+        } else {
+            statusLabel.setText("Delayed")
+            statusLabel.setTextColor(UIColor.redColor())
         }
+        gateLabel.setText("Gate \(flight.gate)")
+        seatLabel.setText("Seat \(flight.seat)")
     }
-
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+        statusLabel.setText("Open iPhone App")
+
+//        let formatter = NSDateFormatter()
+//        formatter.dateFormat = "HH:mm"
+//        
+//        let flight = Flight(dictionary: context as! [String : String], formatter: formatter)
+        
+        flightLabel.setText("Flight ----")
+        routeLabel.setText("")
+        boardingLabel.setText("----- Boards")
+        boardTimeLabel.setText("--:--")
+//        if flight.onSchedule {
+//            statusLabel.setText("On Time")
+//        } else {
+//            statusLabel.setText("Delayed")
+//            statusLabel.setTextColor(UIColor.redColor())
+//        }
+        gateLabel.setText("Gate --")
+        seatLabel.setText("Seat ---")
     }
 
     override func willActivate() {
@@ -63,7 +79,6 @@ class FlightInterfaceController: WKInterfaceController, WCSessionDelegate {
             watchSession!.delegate = self
             watchSession!.activateSession()
         }
-
         
     }
 
