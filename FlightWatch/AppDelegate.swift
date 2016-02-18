@@ -14,9 +14,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
 
     var window: UIWindow?
 
+    var session: WCSession? {
+        didSet {
+            if (WCSession.isSupported()) {
+                if let session = session {
+                    session.delegate = self
+                    session.activateSession()
+                }
+            }
+        }
+    }
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func session(session: WCSession,
+        didReceiveMessage message: [String : AnyObject],
+        replyHandler: ([String : AnyObject]) -> Void)
+    {
+        if let reference = message["reference"] as? String, boardingPass = QRCode(reference) {
+            replyHandler(["boardingPassData": boardingPass.image!])
+        }
+    }
+    
+    func application(application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
+    {
         // Override point for customization after application launch.
+        if (WCSession.isSupported()) {
+            session = WCSession.defaultSession()
+        }
         return true
     }
 
@@ -36,13 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        var watchSession : WCSession?
-        
         if (WCSession.isSupported()){
-            watchSession = WCSession.defaultSession()
-            watchSession!.delegate = self
-            watchSession!.activateSession()
-            
 //            var flight: [String:AnyObject] = [:]
             
             let asset = NSDataAsset(name: "Flights", bundle: NSBundle.mainBundle())
@@ -62,7 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
                     }
 //                flight = item as! [String : AnyObject];
                 
-                try watchSession?.updateApplicationContext([
+                try session?.updateApplicationContext([
                     "origin" : origin,
                     "destination" : destination,
                     "number" : number,

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D280B6F1C76364B00F0CF4C /* CIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D280B6C1C76364B00F0CF4C /* CIColorExtension.swift */; };
+		4D280B701C76364B00F0CF4C /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D280B6D1C76364B00F0CF4C /* QRCode.swift */; };
+		4D280B711C76364B00F0CF4C /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D280B6E1C76364B00F0CF4C /* UIImageViewExtension.swift */; };
 		4DA28EFA1C728D6F0001EC78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA28EF91C728D6F0001EC78 /* AppDelegate.swift */; };
 		4DA28EFC1C728D6F0001EC78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA28EFB1C728D6F0001EC78 /* ViewController.swift */; };
 		4DA28EFF1C728D6F0001EC78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA28EFD1C728D6F0001EC78 /* Main.storyboard */; };
@@ -67,6 +70,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D280B6C1C76364B00F0CF4C /* CIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIColorExtension.swift; sourceTree = "<group>"; };
+		4D280B6D1C76364B00F0CF4C /* QRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
+		4D280B6E1C76364B00F0CF4C /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		4DA28EF61C728D6F0001EC78 /* FlightWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA28EF91C728D6F0001EC78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DA28EFB1C728D6F0001EC78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +138,9 @@
 		4DA28EF81C728D6F0001EC78 /* FlightWatch */ = {
 			isa = PBXGroup;
 			children = (
+				4D280B6C1C76364B00F0CF4C /* CIColorExtension.swift */,
+				4D280B6D1C76364B00F0CF4C /* QRCode.swift */,
+				4D280B6E1C76364B00F0CF4C /* UIImageViewExtension.swift */,
 				4DA28EF91C728D6F0001EC78 /* AppDelegate.swift */,
 				4DA28EFB1C728D6F0001EC78 /* ViewController.swift */,
 				4DA28EFD1C728D6F0001EC78 /* Main.storyboard */,
@@ -309,8 +318,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D280B711C76364B00F0CF4C /* UIImageViewExtension.swift in Sources */,
 				4DA28EFC1C728D6F0001EC78 /* ViewController.swift in Sources */,
+				4D280B701C76364B00F0CF4C /* QRCode.swift in Sources */,
 				4DA28EFA1C728D6F0001EC78 /* AppDelegate.swift in Sources */,
+				4D280B6F1C76364B00F0CF4C /* CIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
