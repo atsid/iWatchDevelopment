@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
 
     var window: UIWindow?
 
+    // Session property and it's observer.
     var session: WCSession? {
         didSet {
             if (WCSession.isSupported()) {
@@ -29,7 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         didReceiveMessage message: [String : AnyObject],
         replyHandler: ([String : AnyObject]) -> Void)
     {
-        if let reference = message["reference"] as? String, boardingPass = QRCode(reference) {
+        if let reference = message["reference"] as? String,
+            boardingPass = QRCode(reference)
+        {
             replyHandler(["boardingPassData": boardingPass.image!])
         }
     }
@@ -39,7 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     {
         // Override point for customization after application launch.
         if (WCSession.isSupported()) {
-            session = WCSession.defaultSession()
+            // session is an observed property
+            self.session = WCSession.defaultSession()
         }
         return true
     }
@@ -65,39 +69,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
             
             let asset = NSDataAsset(name: "Flights", bundle: NSBundle.mainBundle())
             do {
-                let index = Int(arc4random_uniform(UInt32(14)))
+                let json = try? NSJSONSerialization.JSONObjectWithData(asset!.data, options: NSJSONReadingOptions.AllowFragments),
+                initialFlightIndex = Int(arc4random_uniform(UInt32(14)))
                 
-                let json = try? NSJSONSerialization.JSONObjectWithData(asset!.data, options: NSJSONReadingOptions.AllowFragments)
-                guard let jsonArray = json as? NSArray,
-                    let flight = jsonArray[index] as? NSDictionary,
-                    let origin = flight["origin"] as? String,
-                    let destination = flight["destination"] as? String,
-                    let number = flight["number"] as? String,
-                    let delayed = flight["delayed"] as? String,
-                    let gate = flight["gate"] as? String
+                guard let flights = json as? NSArray
                     else {
                         return;
                     }
-//                flight = item as! [String : AnyObject];
-                
+
+                // Update watch with flights and index into the flights for
+                // the initial flight to show on the watch.
                 try session?.updateApplicationContext([
-                    "origin" : origin,
-                    "destination" : destination,
-                    "number" : number,
-                    "delayed" : delayed,
-                    "gate" : gate])
+                    "flights" : flights,
+                    "initialFlightIndex" : initialFlightIndex])
             }
             catch let error as NSError {
                 NSLog("Updating the context failed: " + error.localizedDescription)
             }
         }
-        
     }
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 

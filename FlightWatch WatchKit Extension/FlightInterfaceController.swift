@@ -21,26 +21,77 @@ class FlightInterfaceController: WKInterfaceController, WCSessionDelegate {
     @IBOutlet var gateLabel: WKInterfaceLabel!
     @IBOutlet var seatLabel: WKInterfaceLabel!
 
-    var watchSession : WCSession?
+    var flights = [[String:String]]();
+    let formatter = NSDateFormatter()
+    
+    // Session property and it's observer.
+    var watchSession: WCSession? {
+        didSet {
+            if (WCSession.isSupported()) {
+                if let watchSession = watchSession {
+                    watchSession.delegate = self
+                    watchSession.activateSession()
+                }
+            }
+        }
+    }
+
+    // Session property and it's observer.
+    var flight: Flight? {
+        didSet {
+            if let flight = flight {
+                flightLabel.setText("Flight \(flight.shortNumber)")
+                routeLabel.setText(flight.route)
+                boardingLabel.setText("\(flight.number) Boards")
+                boardTimeLabel.setText(flight.boardsAt)
+                if flight.onSchedule {
+                    statusLabel.setText("On Time")
+                } else {
+                    statusLabel.setText("Delayed")
+                    statusLabel.setTextColor(UIColor.redColor())
+                }
+                gateLabel.setText("Gate \(flight.gate)")
+                seatLabel.setText("Seat \(flight.seat)")
+            }
+        }
+    }
+
+    override init() {
+        super.init()
+        formatter.dateFormat = "HH:mm"
+    }
     
     func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]){
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "HH:mm"
         
-        let flight = Flight(dictionary: applicationContext as! [String : String], formatter: formatter)
-        
-        flightLabel.setText("Flight \(flight.shortNumber)")
-        routeLabel.setText(flight.route)
-        boardingLabel.setText("\(flight.number) Boards")
-        boardTimeLabel.setText(flight.boardsAt)
-        if flight.onSchedule {
-            statusLabel.setText("On Time")
-        } else {
-            statusLabel.setText("Delayed")
-            statusLabel.setTextColor(UIColor.redColor())
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+
+            guard let retrievedFlights = applicationContext["flights"] as? [[String:String]],
+                let initialFlightIndex = applicationContext["initialFlightIndex"] as? Int
+                else {
+                    return;
+            }
+
+            self.flights = retrievedFlights
+            // flight is an observed prop
+            self.flight = Flight(dictionary: self.flights[initialFlightIndex],
+                formatter: self.formatter)
+            
+//            self.table!.setNumberOfRows(array1.count, withRowType: "tableRowController")
+//            
+//            var index = 0
+//            
+//            while index < array1.count {
+//                
+//                let row = self.table.rowControllerAtIndex(index) as! tableRowController
+//                
+//                row.rowLabel.setText(array1[index])
+//                
+//                row.dateLabel.setText(array2[index])
+//                
+//                index++
+//                
+//            }
         }
-        gateLabel.setText("Gate \(flight.gate)")
-        seatLabel.setText("Seat \(flight.seat)")
     }
     
     override func awakeWithContext(context: AnyObject?) {
@@ -48,22 +99,10 @@ class FlightInterfaceController: WKInterfaceController, WCSessionDelegate {
         
         // Configure interface objects here.
         statusLabel.setText("Open iPhone App")
-
-//        let formatter = NSDateFormatter()
-//        formatter.dateFormat = "HH:mm"
-//        
-//        let flight = Flight(dictionary: context as! [String : String], formatter: formatter)
-        
         flightLabel.setText("Flight ----")
         routeLabel.setText("")
         boardingLabel.setText("----- Boards")
         boardTimeLabel.setText("--:--")
-//        if flight.onSchedule {
-//            statusLabel.setText("On Time")
-//        } else {
-//            statusLabel.setText("Delayed")
-//            statusLabel.setTextColor(UIColor.redColor())
-//        }
         gateLabel.setText("Gate --")
         seatLabel.setText("Seat ---")
     }
@@ -72,13 +111,10 @@ class FlightInterfaceController: WKInterfaceController, WCSessionDelegate {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
-        if(WCSession.isSupported()){
-            watchSession = WCSession.defaultSession()
-            // Add self as a delegate of the session so we can handle messages
-            watchSession!.delegate = self
-            watchSession!.activateSession()
+        if (WCSession.isSupported()) {
+            // watchSession is an observed prop
+            self.watchSession = WCSession.defaultSession()
         }
-        
     }
 
     override func didDeactivate() {
