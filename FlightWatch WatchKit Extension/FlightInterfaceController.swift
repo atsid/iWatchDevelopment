@@ -19,18 +19,13 @@ class FlightInterfaceController: WKInterfaceController {
     @IBOutlet var gateLabel: WKInterfaceLabel!
     @IBOutlet var seatLabel: WKInterfaceLabel!
 
-    // 1
     var flight: Flight? {
-        // 2
         didSet {
-            // 3
             if let flight = flight {
-                // 4
                 flightLabel.setText("Flight \(flight.shortNumber)")
                 routeLabel.setText(flight.route)
                 boardingLabel.setText("\(flight.number) Boards")
                 boardTimeLabel.setText(flight.boardsAt)
-                // 5
                 if flight.onSchedule {
                     statusLabel.setText("On Time")
                 } else {
