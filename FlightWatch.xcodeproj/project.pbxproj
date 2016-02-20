@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D46B9DE1C77E8AD00287236 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D46B9DB1C77E8AD00287236 /* UIImageViewExtension.swift */; };
+		4D46B9DF1C77E8AD00287236 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D46B9DC1C77E8AD00287236 /* QRCode.swift */; };
+		4D46B9E01C77E8AD00287236 /* CIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D46B9DD1C77E8AD00287236 /* CIColorExtension.swift */; };
 		4DA28EFA1C728D6F0001EC78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA28EF91C728D6F0001EC78 /* AppDelegate.swift */; };
 		4DA28EFF1C728D6F0001EC78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA28EFD1C728D6F0001EC78 /* Main.storyboard */; };
 		4DA28F011C728D6F0001EC78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA28F001C728D6F0001EC78 /* Assets.xcassets */; };
@@ -66,6 +69,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D46B9DB1C77E8AD00287236 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		4D46B9DC1C77E8AD00287236 /* QRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
+		4D46B9DD1C77E8AD00287236 /* CIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIColorExtension.swift; sourceTree = "<group>"; };
 		4DA28EF61C728D6F0001EC78 /* FlightWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA28EF91C728D6F0001EC78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DA28EFB1C728D6F0001EC78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +137,9 @@
 		4DA28EF81C728D6F0001EC78 /* FlightWatch */ = {
 			isa = PBXGroup;
 			children = (
+				4D46B9DB1C77E8AD00287236 /* UIImageViewExtension.swift */,
+				4D46B9DC1C77E8AD00287236 /* QRCode.swift */,
+				4D46B9DD1C77E8AD00287236 /* CIColorExtension.swift */,
 				4DA28EF91C728D6F0001EC78 /* AppDelegate.swift */,
 				4DA28EFB1C728D6F0001EC78 /* ViewController.swift */,
 				4DA28EFD1C728D6F0001EC78 /* Main.storyboard */,
@@ -308,7 +317,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D46B9DE1C77E8AD00287236 /* UIImageViewExtension.swift in Sources */,
+				4D46B9E01C77E8AD00287236 /* CIColorExtension.swift in Sources */,
 				4DA28EFA1C728D6F0001EC78 /* AppDelegate.swift in Sources */,
+				4D46B9DF1C77E8AD00287236 /* QRCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +525,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FlightWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.atsid.FlightWatch;
@@ -524,6 +540,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FlightWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.atsid.FlightWatch;

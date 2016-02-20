@@ -1,0 +1,3 @@
+[submodule "Carthage/Checkouts/QRCode"]
+	path = Carthage/Checkouts/QRCode
+	url = https://github.com/aschuch/QRCode.git
